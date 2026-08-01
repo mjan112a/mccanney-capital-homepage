@@ -5,7 +5,7 @@ import FaqList from "../components/FaqList";
 import Header from "../components/Header";
 
 export const metadata: Metadata = { title: "FAQ", description: "Straight answers about McCanney Capital, annuity reviews, long-term care planning, compensation, tools, and first meetings." };
-const mediaHref = process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/";
+const mediaHref = process.env.MCCANNEY_MEDIA_URL || (process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/");
 
 export default function FaqPage() {
   return (

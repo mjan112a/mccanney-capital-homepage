@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 export const metadata: Metadata = { title: "The Process", description: "An answer-first retirement and insurance analysis process: define, inspect, model, compare, decide, and service." };
-const mediaHref = process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/";
+const mediaHref = process.env.MCCANNEY_MEDIA_URL || (process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/");
 
 const steps = [
   ["01", "Name the decision", "You tell Mark what you want to know now. That question defines the first scope; it does not automatically trigger a full financial excavation."],

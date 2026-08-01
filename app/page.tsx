@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import QuestionDesk from "./components/QuestionDesk";
 import { services } from "./data";
 
-const mediaHref = process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/";
+const mediaHref = process.env.MCCANNEY_MEDIA_URL || (process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/");
 
 export default function Home() {
   return (

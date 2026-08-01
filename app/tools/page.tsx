@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import ToolsLab from "../components/ToolsLab";
 
 export const metadata: Metadata = { title: "Answer Lab", description: "Educational retirement-gap, annuity-clarity, and care-impact tools with instant results and no account gate." };
-const mediaHref = process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/";
+const mediaHref = process.env.MCCANNEY_MEDIA_URL || (process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/");
 
 export default function ToolsPage() {
   return (

@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import { services } from "../data";
 
 export const metadata: Metadata = { title: "How We Help", description: "Retirement income, annuity, long-term care, life insurance, stress-testing, and advisor-collaboration services." };
-const mediaHref = process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/";
+const mediaHref = process.env.MCCANNEY_MEDIA_URL || (process.env.NODE_ENV === "development" ? "http://localhost:4173/" : "https://media.mccanneycapital.com/");
 
 export default function ServicesPage() {
   return (
